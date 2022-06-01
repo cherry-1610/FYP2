@@ -15,5 +15,6 @@ echo $_SESSION['username'];
 <body>
     <button><a href="logout.php">logout</a></button>
     <button><a href="logout.php">logout1</a></button>
+    adriana busuk!
 </body>
 </html>

@@ -13,7 +13,7 @@ echo $_SESSION['username'];
     <title>Document</title>
 </head>
 <body>
-    <button><a href="logout.php">logout
-    </a></button>
+    <button><a href="logout.php">logout</a></button>
+    <button><a href="logout.php">logout1</a></button>
 </body>
 </html>

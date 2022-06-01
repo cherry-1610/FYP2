@@ -2,6 +2,17 @@
 session_start();
 include('connection.php');
 $username = $_SESSION['username'];
+$ID = $_SESSION['ID'];
+if (isset($_POST['update'])) {
+    $startDate = $_POST['startDate'];
+    $sql = "UPDATE employee SET quarantineStartDate='$startDate' WHERE E_ID='$ID'";
+    $result = mysqli_query($conn,$sql);
+    if($result){
+        echo "<script>alert('Succesfully updated!');window.location.href='empmainPage.php';</script>";
+    } else {
+        echo "<script>alert('Something went wrong! Please try again')</script>";
+    }
+}
 
 ?>
 <!DOCTYPE html>
@@ -21,10 +32,14 @@ $username = $_SESSION['username'];
     <div style="float: right; padding-left:5px;" class="justify-content-center">
         <table class="table table-bordered table-light table-striped adminTab">
             <tr>
-                <td class="justify-content-center"><h4><b>Employee</b></h4></td>
+                <td class="justify-content-center">
+                    <h4><b>Employee</b></h4>
+                </td>
             </tr>
             <tr>
-                <td class="justify-content-center"><h6><?php echo $username ?></h6></td>
+                <td class="justify-content-center">
+                    <h6><?php echo $username ?></h6>
+                </td>
             </tr>
             <tr>
                 <td class="justify-content-center"><button class="btn btn-warning"><a class="btn" href="logout.php">Log Out</a></button></td>
@@ -41,24 +56,17 @@ $username = $_SESSION['username'];
 
         <div class='row'>
             <div class='col d-flex justify-content-center'>
-                <fieldset style='width: 100%'>
-
-                    <table border='0' align='center' width='100%'>
+                <form action="" method="post">
+                    <table class="table table-bordered">
                         <tr>
-                            <td class="" style='padding:10px; width:33%;' align='center'><a href='#'><img src='img/address.png'></a></td>
-                            <td class="" style='padding:10px; width:33%;' align='center'><a href='empStartDate.php'><img src='img/add-friend.png'></a></td>
-                            <td class="" style='padding:10px; width:33%;' align='center'><a href='#'><img src='img/monitor.png'></a></td>
-
+                            <td>Qurantine Start Date: </td>
+                            <td><input type="date" name="startDate" id="startDate"></td>
                         </tr>
-
                         <tr>
-                            <td align='center' style='padding-bottom:5px;'> Diagnostic </td>
-                            <td align='center' style='padding-bottom:5px;'> Start Date </td>
-                            <td align='center' style='padding-bottom:5px;'> Dashboard </td>
-
+                            <td><button type=""><input type="button" value="" name="update" class="btn">UPDATE</button></td>
                         </tr>
                     </table>
-                </fieldset>
+                </form>
             </div>
 
         </div>

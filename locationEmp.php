@@ -2,6 +2,7 @@
 session_start();
 include('connection.php');
 $username = $_SESSION['username'];
+$ID = $_SESSION['ID'];
 
 ?>
 <!DOCTYPE html>
@@ -13,7 +14,7 @@ $username = $_SESSION['username'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>Admin Main Page</title>
+    <title>Employee Location</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -21,7 +22,7 @@ $username = $_SESSION['username'];
     <div style="float: right; padding-left:5px;" class="justify-content-center">
         <table class="table table-bordered table-light table-striped adminTab">
             <tr>
-                <td class="justify-content-center"><h4><b>Employee</b></h4></td>
+                <td class="justify-content-center"><h4><b>Admin</b></h4></td>
             </tr>
             <tr>
                 <td class="justify-content-center"><h6><?php echo $username ?></h6></td>
@@ -41,24 +42,35 @@ $username = $_SESSION['username'];
 
         <div class='row'>
             <div class='col d-flex justify-content-center'>
-                <fieldset style='width: 100%'>
-
-                    <table border='0' align='center' width='100%'>
-                        <tr>
-                            <td class="" style='padding:10px; width:33%;' align='center'><a href='#'><img src='img/address.png'></a></td>
-                            <td class="" style='padding:10px; width:33%;' align='center'><a href='empStartDate.php'><img src='img/add-friend.png'></a></td>
-                            <td class="" style='padding:10px; width:33%;' align='center'><a href='#'><img src='img/monitor.png'></a></td>
-
-                        </tr>
-
-                        <tr>
-                            <td align='center' style='padding-bottom:5px;'> Diagnostic </td>
-                            <td align='center' style='padding-bottom:5px;'> Start Date </td>
-                            <td align='center' style='padding-bottom:5px;'> Dashboard </td>
-
-                        </tr>
-                    </table>
-                </fieldset>
+                <table class="table">
+                    <tr>
+                        <th class="thead">Employee Name</th>
+                        <th class="thead">Emplyee ID</th>
+                        <th class="thead">Employee Location</th>
+                        <th class="thead">Employee Phone Number</th>
+                        <th class="thead">Quarantine Start Date</th>
+                    </tr>
+                    
+                    <?php
+                    $sql = "SELECT * from employee where ID_admin='$ID'";
+                    $result = mysqli_query($conn,$sql);
+                    if($result->num_rows > 0){
+                        while ($row = mysqli_fetch_assoc($result)){
+                            ?>
+                            <tr>
+                                <td><?php echo $row['E_name'] ?></td>
+                                <td><?php echo $row['E_ID'] ?></td>
+                                <td><?php echo $row['E_location'] ?></td>
+                                <td><?php echo $row['E_phoneNum'] ?></td>
+                                <td><?php echo $row['quarantineStartDate'] ?></td>
+                            </tr>
+                            <?php
+                        }
+                    } else {
+                        echo "<tr><td colspan='4'>No Employee Record</td></tr>";
+                    }
+                    ?>
+                </table>
             </div>
 
         </div>

@@ -19,6 +19,7 @@
       echo "<script>window.location.href='adminmainPage.php';</script>";
     } else {
       echo "<script>alert('Wrong username/password!');</script>";
+      
     }
   }
   

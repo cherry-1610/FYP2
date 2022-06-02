@@ -49,7 +49,7 @@ if (isset($_POST['update'])) {
     <div class="container rounded bg-white pb-5" style="margin-top: 200px;">
         <div class="row ">
             <div class="col d-flex justify-content-center">
-                <h1 style="color: orange; text-shadow: 2px 2px 5px black;">PISAH</h1>
+                <h1 style="margin: 50px;color: orange; text-shadow: 2px 2px 5px black;">PISAH</h1>
             </div>
         </div>
 
@@ -57,15 +57,14 @@ if (isset($_POST['update'])) {
         <div class='row'>
             <div class='col d-flex justify-content-center'>
                 <form action="" method="post">
-                    <table class="table table-bordered">
+                    <table class="table table-borderless" style="margin:50px">
                         <tr>
-                            <td>Qurantine Start Date: </td>
+                            <td style=>Qurantine Start Date: </td>
                             <td><input type="date" name="startDate" id="startDate"></td>
                         </tr>
-                        <tr>
-                            <td><button type=""><input type="button" value="" name="update" class="btn">UPDATE</button></td>
-                        </tr>
                     </table>
+                    <button type="submit" name="update" class="btn btn-primary profile-button m-2" 
+                    style="background-color: orange; border-color: orange; width:150px; height:50px">UPDATE</button>
                 </form>
             </div>
 

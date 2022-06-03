@@ -3,6 +3,7 @@ session_start();
 include('connection.php');
 $username = $_SESSION['username'];
 $ID = $_SESSION['ID'];
+echo "&nbsp;";
 
 ?>
 <!DOCTYPE html>
@@ -35,7 +36,7 @@ $ID = $_SESSION['ID'];
     <div class="container rounded bg-white pb-5" style="margin-top: 200px;">
         <div class="row ">
             <div class="col d-flex justify-content-center">
-                <h1 style="color: orange; text-shadow: 2px 2px 5px black;">PISAH</h1>
+                <img src="img/logo_PISAH-removebg-preview.png" alt="">
             </div>
         </div>
 

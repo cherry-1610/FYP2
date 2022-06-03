@@ -7,6 +7,8 @@
 <?php
 
 $conn = mysqli_connect('localhost','root','','pisah');
+date_default_timezone_set('Asia/Kuala_Lumpur');
+
 
 // Check connection
 if ($conn->connect_error) {

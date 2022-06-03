@@ -9,7 +9,7 @@
           $eLoc = $_POST['E_location'];
           $ePhoneNum = $_POST['E_phoneNum'];
           $ID = $_SESSION['ID'];
-          $sql = "INSERT INTO employee (E_ID,E_pass,E_name,E_location,E_phoneNum,dailyCheckIn,ID_admin) values ('$empID','$ePass','$eName','$eLoc','$ePhoneNum','0','$ID')";
+          $sql = "INSERT INTO employee (E_ID,E_pass,E_name,E_location,E_phoneNum,ID_admin,dailyCheckIn) values ('$empID','$ePass','$eName','$eLoc','$ePhoneNum','$ID','0')";
           $result = mysqli_query($conn,$sql);
           if ($result){
             echo "<script>alert('Employee registered!'); window.location.href='adminmainPage.php';</script>";

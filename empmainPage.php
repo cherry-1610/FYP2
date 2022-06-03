@@ -14,7 +14,7 @@ $username = $_SESSION['username'];
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>Admin Main Page</title>
+    <title>Employee Main Page</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -25,7 +25,7 @@ $username = $_SESSION['username'];
     <div class="container rounded bg-white pb-5" style="margin-top: 200px;">
         <div class="row ">
             <div class="col d-flex justify-content-center">
-                <h1 style="color: orange; text-shadow: 2px 2px 5px black;">PISAH</h1>
+                <img src="img/logo_PISAH-removebg-preview.png" alt="">
             </div>
         </div>
 
@@ -40,9 +40,8 @@ $username = $_SESSION['username'];
                                         src='img/address.png'></a></td>
                             <td class="" style='padding:10px; width:33%;' align='center'><a href='empStartDate.php'><img
                                         src='img/add-friend.png'></a></td>
-                            <td class="" style='padding:10px; width:33%;' align='center'><a href='#'><img
+                            <td class="" style='padding:10px; width:33%;' align='center'><a href='dashboard.php'><img
                                         src='img/monitor.png'></a></td>
-
                         </tr>
 
                         <tr>

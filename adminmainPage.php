@@ -25,7 +25,7 @@ $username = $_SESSION['username'];
     <div class="container rounded bg-white pb-5" style="margin-top: 200px;">
         <div class="row ">
             <div class="col d-flex justify-content-center">
-                <h1 style="color: orange; text-shadow: 2px 2px 5px black;">PISAH</h1>
+                <img src="img/logo_PISAH-removebg-preview.png" alt="">
             </div>
         </div>
 
@@ -40,7 +40,7 @@ $username = $_SESSION['username'];
                                         src='img/address.png'></a></td>
                             <td class="" style='padding:10px; width:33%;' align='center'><a href='createEmp.php'><img
                                         src='img/add-friend.png'></a></td>
-                            <td class="" style='padding:10px; width:33%;' align='center'><a href='#'><img
+                            <td class="" style='padding:10px; width:33%;' align='center'><a href='monitorEmp.php'><img
                                         src='img/monitor.png'></a></td>
 
                         </tr>

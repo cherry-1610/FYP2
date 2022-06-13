@@ -37,9 +37,11 @@ $username = $_SESSION['username'];
                     <table border='0' align='center' width='100%'>
                         <tr>
                             <td class="" style='padding:10px; width:33%;' align='center'><a href='diagnostics.php'><img
-                                        src='img/address.png'></a></td>
+                                        style="height: 35%; width: 35%"
+                                        src='img/hassessment.png'></a></td>
                             <td class="" style='padding:10px; width:33%;' align='center'><a href='empStartDate.php'><img
-                                        src='img/add-friend.png'></a></td>
+                                        style="height: 35%; width: 35%"
+                                        src='img/calendar.png'></a></td>
                             <td class="" style='padding:10px; width:33%;' align='center'><a href='dashboard.php'><img
                                         src='img/monitor.png'></a></td>
                         </tr>
@@ -47,7 +49,7 @@ $username = $_SESSION['username'];
                         <tr>
                             <td align='center' style='padding-bottom:5px;'> Diagnostic </td>
                             <td align='center' style='padding-bottom:5px;'> Start Date </td>
-                            <td align='center' style='padding-bottom:5px;'> Dashboard </td>
+                            <td align='center' style='padding-bottom:5px;'> Health Screening </td>
 
                         </tr>
 

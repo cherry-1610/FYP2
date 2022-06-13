@@ -24,6 +24,9 @@ if($result){
 // }
 $dailyUpdate = "UPDATE employee SET dailyCheckIn='0' where E_ID='$ID'";
 $resultUpdate = mysqli_query($conn,$dailyUpdate);
+// if($resultUpdate){
+   
+// }
 
 
 
@@ -97,10 +100,8 @@ if(isset($_POST['back'])){
     <?php
     if (isset($_SESSION['fever'])) {
         echo "<style>
-                #fever{
-                    pointer-events: none;
-                }
                 #fever>button:not(#backBtn>button){
+                    pointer-events: none;
                     opacity: 0.3;
                 }
             </style>";
